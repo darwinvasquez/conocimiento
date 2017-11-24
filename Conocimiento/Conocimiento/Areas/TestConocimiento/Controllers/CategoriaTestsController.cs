@@ -7,111 +7,110 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using Conocimiento.Areas.TestConocimiento.Models;
-using Conocimiento.Models;
 
 namespace Conocimiento.Areas.TestConocimiento.Controllers
 {
-    public class CategoriasController : Controller
+    public class CategoriaTestsController : Controller
     {
         private ContextTest db = new ContextTest();
 
-        // GET: TestConocimiento/Categorias
+        // GET: TestConocimiento/CategoriaTests
         public ActionResult Index()
         {
-            return View(db.Categorias.ToList());
+            return View(db.CategoriaTest.ToList());
         }
 
-        // GET: TestConocimiento/Categorias/Details/5
+        // GET: TestConocimiento/CategoriaTests/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Categoria categoria = db.Categorias.Find(id);
-            if (categoria == null)
+            CategoriaTest categoriaTest = db.CategoriaTest.Find(id);
+            if (categoriaTest == null)
             {
                 return HttpNotFound();
             }
-            return View(categoria);
+            return View(categoriaTest);
         }
 
-        // GET: TestConocimiento/Categorias/Create
+        // GET: TestConocimiento/CategoriaTests/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: TestConocimiento/Categorias/Create
+        // POST: TestConocimiento/CategoriaTests/Create
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "CategoriaId,Descripcion,Icons,EstaActivo")] Categoria categoria)
+        public ActionResult Create([Bind(Include = "CategoriaTestId,Nombre,Estado")] CategoriaTest categoriaTest)
         {
             if (ModelState.IsValid)
             {
-                db.Categorias.Add(categoria);
+                db.CategoriaTest.Add(categoriaTest);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(categoria);
+            return View(categoriaTest);
         }
 
-        // GET: TestConocimiento/Categorias/Edit/5
+        // GET: TestConocimiento/CategoriaTests/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Categoria categoria = db.Categorias.Find(id);
-            if (categoria == null)
+            CategoriaTest categoriaTest = db.CategoriaTest.Find(id);
+            if (categoriaTest == null)
             {
                 return HttpNotFound();
             }
-            return View(categoria);
+            return View(categoriaTest);
         }
 
-        // POST: TestConocimiento/Categorias/Edit/5
+        // POST: TestConocimiento/CategoriaTests/Edit/5
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "CategoriaId,Descripcion,Icons,EstaActivo")] Categoria categoria)
+        public ActionResult Edit([Bind(Include = "CategoriaTestId,Nombre,Estado")] CategoriaTest categoriaTest)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(categoria).State = EntityState.Modified;
+                db.Entry(categoriaTest).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(categoria);
+            return View(categoriaTest);
         }
 
-        // GET: TestConocimiento/Categorias/Delete/5
+        // GET: TestConocimiento/CategoriaTests/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Categoria categoria = db.Categorias.Find(id);
-            if (categoria == null)
+            CategoriaTest categoriaTest = db.CategoriaTest.Find(id);
+            if (categoriaTest == null)
             {
                 return HttpNotFound();
             }
-            return View(categoria);
+            return View(categoriaTest);
         }
 
-        // POST: TestConocimiento/Categorias/Delete/5
+        // POST: TestConocimiento/CategoriaTests/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Categoria categoria = db.Categorias.Find(id);
-            db.Categorias.Remove(categoria);
+            CategoriaTest categoriaTest = db.CategoriaTest.Find(id);
+            db.CategoriaTest.Remove(categoriaTest);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
