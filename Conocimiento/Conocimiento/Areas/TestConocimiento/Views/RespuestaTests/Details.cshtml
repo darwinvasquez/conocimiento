@@ -1,0 +1,50 @@
+﻿@model Conocimiento.Areas.TestConocimiento.Models.RespuestaTest
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>RespuestaTest</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PreguntaTest.Pregunta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PreguntaTest.Pregunta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Respuesta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Respuesta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Correcta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Correcta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.RespuestaTestId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

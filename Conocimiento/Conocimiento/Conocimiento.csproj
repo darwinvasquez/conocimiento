@@ -195,6 +195,14 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Areas\TestConocimiento\Controllers\CategoriasController.cs" />
+    <Compile Include="Areas\TestConocimiento\Controllers\PreguntaTestsController.cs" />
+    <Compile Include="Areas\TestConocimiento\Controllers\RespuestaTestsController.cs" />
+    <Compile Include="Areas\TestConocimiento\Models\CategoriaTest.cs" />
+    <Compile Include="Areas\TestConocimiento\Models\ContextTest.cs" />
+    <Compile Include="Areas\TestConocimiento\Models\PreguntaTest.cs" />
+    <Compile Include="Areas\TestConocimiento\Models\RespuestaTest.cs" />
+    <Compile Include="Areas\TestConocimiento\TestConocimientoAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -202,6 +210,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Categoria.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -223,6 +232,24 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Areas\TestConocimiento\Views\web.config" />
+    <Content Include="Areas\TestConocimiento\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\TestConocimiento\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\TestConocimiento\Views\Categorias\Create.cshtml" />
+    <Content Include="Areas\TestConocimiento\Views\Categorias\Delete.cshtml" />
+    <Content Include="Areas\TestConocimiento\Views\Categorias\Details.cshtml" />
+    <Content Include="Areas\TestConocimiento\Views\Categorias\Edit.cshtml" />
+    <Content Include="Areas\TestConocimiento\Views\Categorias\Index.cshtml" />
+    <Content Include="Areas\TestConocimiento\Views\PreguntaTests\Create.cshtml" />
+    <Content Include="Areas\TestConocimiento\Views\PreguntaTests\Delete.cshtml" />
+    <Content Include="Areas\TestConocimiento\Views\PreguntaTests\Details.cshtml" />
+    <Content Include="Areas\TestConocimiento\Views\PreguntaTests\Edit.cshtml" />
+    <Content Include="Areas\TestConocimiento\Views\PreguntaTests\Index.cshtml" />
+    <Content Include="Areas\TestConocimiento\Views\RespuestaTests\Create.cshtml" />
+    <Content Include="Areas\TestConocimiento\Views\RespuestaTests\Delete.cshtml" />
+    <Content Include="Areas\TestConocimiento\Views\RespuestaTests\Details.cshtml" />
+    <Content Include="Areas\TestConocimiento\Views\RespuestaTests\Edit.cshtml" />
+    <Content Include="Areas\TestConocimiento\Views\RespuestaTests\Index.cshtml" />
     <None Include="Properties\PublishProfiles\Ftp - Conocimiento.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
