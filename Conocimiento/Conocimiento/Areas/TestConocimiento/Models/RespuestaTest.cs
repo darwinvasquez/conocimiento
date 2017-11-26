@@ -33,7 +33,7 @@ namespace Conocimiento.Areas.TestConocimiento.Models
         ///// </summary>
         [Column("Respuesta")]
         [Required]
-        [StringLength(500, MinimumLength = 3, ErrorMessage = "La cantidad máxima de caracteres son 500")]
+        [StringLength(500, MinimumLength = 1, ErrorMessage = "La cantidad máxima de caracteres son 500")]
         [Display(Name = "Respuesta")]
         public string Respuesta { get; set; }
 
